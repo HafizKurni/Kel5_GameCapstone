@@ -37,7 +37,7 @@ public class CharMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 movementInput = playerInput.Player.WASD.ReadValue<Vector2>();
+        Vector2 movementInput = playerInput.Player.Movement.ReadValue<Vector2>();
         bool dashInput = playerInput.Player.Dash.triggered;
 
         body.velocity = new Vector2(movementInput.x * Speed, body.velocity.y);
@@ -88,7 +88,7 @@ public class CharMovements : MonoBehaviour
         anim.SetBool("Grounded", Grounded);
     }
 
-    private void Jump()
+    public void Jump()
     {
         body.velocity = new Vector2(body.velocity.x, Speed);
         anim.SetTrigger("Jump");

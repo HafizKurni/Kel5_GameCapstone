@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
+    [Header("Health Settings")]
+
     [SerializeField] private float startingHealth;
     [SerializeField] private float deathAnimationDuration = 1f;
     [SerializeField] private GameObject lootPrefab;
@@ -13,12 +16,16 @@ public class HealthSystem : MonoBehaviour
     public float currentHealth { get; private set; }
     public bool IsDead { get; private set; }
 
+    [Header("UI Elements")]
+    [SerializeField] private Image healthBar;
+
     // Start is called before the first frame update
     void Awake()
     {
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         IsDead = false;
+        UpdateHealthSlider();
     }
 
     public void TakeDamage(float _damage)
@@ -26,6 +33,7 @@ public class HealthSystem : MonoBehaviour
         if (IsDead) return; // Cek apakah sudah mati
 
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        UpdateHealthSlider();
 
         if (currentHealth > 0)
         {
@@ -47,6 +55,15 @@ public class HealthSystem : MonoBehaviour
     {
         if (IsDead) return;
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
+        UpdateHealthSlider();
+    }
+
+    private void UpdateHealthSlider()
+    {
+        if (healthBar != null)
+        {
+            healthBar.fillAmount = currentHealth / startingHealth;
+        }
     }
 
     private IEnumerator HandleDeath()
