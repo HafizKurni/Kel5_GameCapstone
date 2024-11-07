@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 1859947161}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1053,8 +1053,8 @@ MonoBehaviour:
   attackableLayer:
     serializedVersion: 2
     m_Bits: 64
-  timeBetweenAttack: 0
-  damage: 2
+  timeBetweenAttack: 1
+  damage: 1
   slashEffect: {fileID: 8811336626977482900, guid: f20330929da87ac4192e1f5d97bd4482, type: 3}
   recoilXSteps: 5
   recoilYSteps: 5
@@ -1260,7 +1260,7 @@ GameObject:
   - component: {fileID: 1932574933}
   - component: {fileID: 1932574932}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
