@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerStateList : MonoBehaviour
 {
-    // Start is called before the first frame update
     public bool jumping = false;
     public bool dashing = false;
+    public bool recoilingX, recoilingY;
+    public bool lookingRight;  
+    public bool invincible;
 }
