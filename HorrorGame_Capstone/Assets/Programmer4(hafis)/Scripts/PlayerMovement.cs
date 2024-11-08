@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(hirizontalMovement * moveSpeed, rb.velocity.y);
         GorundCheck();
 
-        animator.SetFloat("Walk", rb.velocity.x);
+        animator.SetFloat("WalkingChar", rb.velocity.x);
     }
 
     public void Move(InputAction.CallbackContext context)
