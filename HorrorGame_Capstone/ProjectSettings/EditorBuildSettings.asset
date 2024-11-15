@@ -5,8 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Programmer2 (Agus)/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Programmer3(Abad)/Main Menu.unity
+    guid: 21970baf1d3bb7a4395089d25528aab4
+  - enabled: 1
+    path: Assets/Scenes/Programmer3(Abad)/Gameplay.unity
+    guid: 413b447054116d24c8c9982317c4deb0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 235c93bdd5b747448933deb085913b89, type: 3}
