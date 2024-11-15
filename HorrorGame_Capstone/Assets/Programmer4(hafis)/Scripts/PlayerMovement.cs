@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     public LayerMask groundLayer;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(hirizontalMovement * moveSpeed, rb.velocity.y);
         GorundCheck();
+
+        animator.SetFloat("WalkingChar", rb.velocity.x);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -58,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+   
 
     private void GorundCheck()
     {

@@ -7,6 +7,7 @@ TagManager:
   - Loot
   - Ground
   - Enemy
+  - Gate
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Player
   - Enemy
   - 
-  - 
+  - InteractObject
   - 
   - 
   - 
@@ -52,4 +53,7 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 3643007745
+    locked: 0
+  - name: Interaction
+    uniqueID: 3111681985
     locked: 0
