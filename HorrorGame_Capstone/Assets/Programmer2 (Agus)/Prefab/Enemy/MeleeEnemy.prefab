@@ -86,9 +86,10 @@ GameObject:
   - component: {fileID: 1249342606140025790}
   - component: {fileID: 2590428460242081353}
   - component: {fileID: 1822536171380493105}
-  - component: {fileID: 7367995426358741650}
   - component: {fileID: 4630576381553733973}
+  - component: {fileID: 4632444758619044910}
   - component: {fileID: 212147925487021564}
+  - component: {fileID: -3232470369169833860}
   m_Layer: 9
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -185,24 +186,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7367995426358741650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5312416403421260026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36d847bedf16c114583938b88bdf3ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 10
-  deathAnimationDuration: 2
-  lootPrefab: {fileID: 2743637596322197745, guid: 0114bab6521cec74b838cf1fc40fd7f5, type: 3}
-  lootDelay: 0
-  lootOffset: {x: 0, y: 1, z: 0}
-  healthBar: {fileID: 0}
 --- !u!114 &4630576381553733973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +206,24 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &4632444758619044910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5312416403421260026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb7ff0d1a4108a84184e6d3b2bf97240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 10
+  deathAnimationDuration: 1
+  lootPrefab: {fileID: 2743637596322197745, guid: 0114bab6521cec74b838cf1fc40fd7f5, type: 3}
+  lootDelay: 0.5
+  lootOffset: {x: 0, y: 0.5, z: 0}
+  healthBar: {fileID: 4510165829608231026}
 --- !u!61 &212147925487021564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -268,6 +269,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.909766, y: 1.8630755}
   m_EdgeRadius: 0
+--- !u!114 &-3232470369169833860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5312416403421260026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7891863a8cb02e41a416e57e1b81940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &5909758967041209652
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4195700000006637913}
-  - component: {fileID: 3698651538959091558}
+  - component: {fileID: 5785987300207908060}
   m_Layer: 5
   m_Name: Healthbar
   m_TagString: Untagged
@@ -408,7 +422,7 @@ RectTransform:
   m_AnchoredPosition: {x: -205, y: 168}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3698651538959091558
+--- !u!114 &5785987300207908060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -417,10 +431,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7226156877252623635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5b3689fe7f87af4eac4a25ac9d1544f, type: 3}
+  m_Script: {fileID: 11500000, guid: a964cba7e0128c343b87e38ab79bc3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 7367995426358741650}
+  playerHealth: {fileID: 4632444758619044910}
   totalHealthBar: {fileID: 1281393876627917159}
   CurrentHealthBar: {fileID: 4510165829608231026}
 --- !u!1 &9169271913161339420

@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [Header("KameraOptions")]
+    [Header("CameraOptions")]
     [SerializeField] private Transform player;
     [SerializeField] private float distanceAhead;
     [SerializeField] private float cameraSpeed;
     private float lookAhead;
 
-    [Header ("KmaeraBoudary")]
+    [Header ("CameraBoudary")]
     [SerializeField] private float leftLimit;
     [SerializeField] private float rightLimit;
-    [SerializeField] private float upperLimit;  // Batas atas
-    [SerializeField] private float lowerLimit;  // Batas bawah
+    [SerializeField] private float upperLimit;
+    [SerializeField] private float lowerLimit;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class CameraController : MonoBehaviour
         lookAhead = Mathf.Lerp(lookAhead, (distanceAhead * player.localScale.x), Time.deltaTime * cameraSpeed);
         float targetPositionX = player.position.x + lookAhead;
 
-        // Batasi posisi kamera
+        // Batasi posisi X kamera
         targetPositionX = Mathf.Clamp(targetPositionX, leftLimit, rightLimit);
 
         // Batasi posisi Y kamera

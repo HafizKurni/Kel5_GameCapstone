@@ -1,31 +1,48 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class InteractionItem : MonoBehaviour
 {
+    public GameObject interactPrompt;
     public float interactionRange = 2f;
-    public KeyCode interactionKey = KeyCode.F;
-    public void Update()
+    private PlayerInput playerInput;
+    private Animator anim;
+    
+    private void Start()
     {
-        // Cek jika tombol interaksi ditekan
-        if (Input.GetKeyDown(interactionKey))
+        interactPrompt.SetActive(false);
+        anim = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.F))
         {
             Interact();
         }
     }
 
-    public void Interact()
+    private void OnTriggerEnter(Collider other)
     {
-        // Cari semua collider dalam jangkauan interaksi
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, interactionRange);
-        foreach (var hitCollider in hitColliders)
+        if (other.CompareTag("Player") && interactPrompt.activeSelf)
         {
-            // Cek apakah objek yang terdeteksi adalah tile
-            if (hitCollider.CompareTag("Gate")) // Pastikan tiles memiliki tag "Tile"
-            {
-                Destroy(hitCollider.gameObject); // Hapus objek tile
-                Debug.Log("Removed tile: " + hitCollider.name);
-            }
+            interactPrompt.SetActive(true);
+            Debug.Log("Player entered trigger: " + gameObject.name);
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            interactPrompt.SetActive(false);
+        }
+    }
+
+    private void Interact()
+    {
+        Debug.Log("Interacted with: " + gameObject.name);
+        anim.SetTrigger("Activate");
     }
 }

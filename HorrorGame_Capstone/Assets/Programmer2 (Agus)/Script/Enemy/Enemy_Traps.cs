@@ -21,7 +21,7 @@ public class Enemy_Traps : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.GetComponent<HealthSystem>().TakeDamage(damage);
+            collision.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
     }
 }

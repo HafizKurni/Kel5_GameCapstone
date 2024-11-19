@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthSystem : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     [Header("Health Settings")]
-
-    [SerializeField] private float startingHealth;
+    [SerializeField] private float startingHealth = 100f;
     [SerializeField] private float deathAnimationDuration = 1f;
     [SerializeField] private GameObject lootPrefab;
     [SerializeField] private float lootDelay = 0.5f;
@@ -18,8 +17,6 @@ public class HealthSystem : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField] private Image healthBar;
-
-    // Start is called before the first frame update
     void Awake()
     {
         currentHealth = startingHealth;
@@ -28,11 +25,11 @@ public class HealthSystem : MonoBehaviour
         UpdateHealthSlider();
     }
 
-    public void TakeDamage(float _damage)
+    public void TakeDamage(float damage)
     {
-        if (IsDead) return; // Cek apakah sudah mati
+        if (IsDead) return;
 
-        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
         UpdateHealthSlider();
 
         if (currentHealth > 0)
@@ -43,19 +40,8 @@ public class HealthSystem : MonoBehaviour
         {
             IsDead = true;
             anim.SetTrigger("Die");
-            if (GetComponent<PlayerMovement>() != null)
-            {
-                GetComponent<PlayerMovement>().enabled = false; // Hanya jika ada komponen PlayerMovement
-            }
             StartCoroutine(HandleDeath());
         }
-    }
-
-    public void HealAmount(float _value)
-    {
-        if (IsDead) return;
-        currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
-        UpdateHealthSlider();
     }
 
     private void UpdateHealthSlider()
@@ -68,9 +54,8 @@ public class HealthSystem : MonoBehaviour
 
     private IEnumerator HandleDeath()
     {
-        // Tunggu selama durasi animasi kematian
         yield return new WaitForSeconds(deathAnimationDuration);
-        yield return new WaitForSeconds(lootDelay); // Delay sebelum loot dikeluarkan
+        yield return new WaitForSeconds(lootDelay);
         DropLoot();
         gameObject.SetActive(false);
     }
@@ -79,10 +64,7 @@ public class HealthSystem : MonoBehaviour
     {
         if (lootPrefab != null)
         {
-            // Menghitung posisi titik spawn loot, menggunakan posisi tengah enemy
             Vector3 lootPosition = transform.position + lootOffset;
-
-            // Instantiate lootPrefab pada posisi yang sudah dihitung
             Instantiate(lootPrefab, lootPosition, Quaternion.identity);
         }
     }

@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8154035998149507125}
   - component: {fileID: 7653507070730858282}
   - component: {fileID: 5395400883839675069}
+  - component: {fileID: 5489975021763553851}
   m_Layer: 9
   m_Name: RangedEnemy
   m_TagString: Enemy
@@ -153,14 +154,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2740873626764856327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36d847bedf16c114583938b88bdf3ae5, type: 3}
+  m_Script: {fileID: 11500000, guid: cb7ff0d1a4108a84184e6d3b2bf97240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 10
-  deathAnimationDuration: 2
+  deathAnimationDuration: 1
   lootPrefab: {fileID: 2743637596322197745, guid: 0114bab6521cec74b838cf1fc40fd7f5, type: 3}
-  lootDelay: 0
-  lootOffset: {x: 0, y: 1, z: 0}
+  lootDelay: 0.5
+  lootOffset: {x: 0, y: 0.5, z: 0}
   healthBar: {fileID: 2808381760161318352}
 --- !u!61 &7653507070730858282
 BoxCollider2D:
@@ -239,6 +240,19 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &5489975021763553851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740873626764856327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7891863a8cb02e41a416e57e1b81940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &3121134864314859226
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2769027420878691470}
-  - component: {fileID: 3373736658154381640}
+  - component: {fileID: 7219600910842063098}
   m_Layer: 5
   m_Name: Healthbar
   m_TagString: Untagged
@@ -383,7 +397,7 @@ RectTransform:
   m_AnchoredPosition: {x: -205, y: 168}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3373736658154381640
+--- !u!114 &7219600910842063098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -392,7 +406,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4518313759395756765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5b3689fe7f87af4eac4a25ac9d1544f, type: 3}
+  m_Script: {fileID: 11500000, guid: a964cba7e0128c343b87e38ab79bc3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 8154035998149507125}

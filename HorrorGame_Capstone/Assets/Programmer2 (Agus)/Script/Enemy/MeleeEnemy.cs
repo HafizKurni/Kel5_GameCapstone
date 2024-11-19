@@ -20,7 +20,7 @@ public class MeleeEnemy : MonoBehaviour
 
     //References
     private Animator anim;
-    private HealthSystem playerHealth;
+    private PlayerHealth playerHealth;
     private EnemyPatrol enemyPatrol;
 
     private void Awake()
@@ -55,7 +55,7 @@ public class MeleeEnemy : MonoBehaviour
             0, Vector2.left, 0, playerLayer);
 
         if (hit.collider != null)
-            playerHealth = hit.transform.GetComponent<HealthSystem>();
+            playerHealth = hit.transform.GetComponent<PlayerHealth>();
 
         return hit.collider != null;
     }

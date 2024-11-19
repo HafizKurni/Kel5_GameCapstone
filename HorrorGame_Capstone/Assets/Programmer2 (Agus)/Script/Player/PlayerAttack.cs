@@ -59,7 +59,7 @@ public class PlayerAttack : MonoBehaviour
     }
     private void DealDamage(Collider2D enemyCollider)
     {
-        HealthSystem enemyHealth = enemyCollider.GetComponent<HealthSystem>();
+        EnemyHealth enemyHealth = enemyCollider.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(damage);
