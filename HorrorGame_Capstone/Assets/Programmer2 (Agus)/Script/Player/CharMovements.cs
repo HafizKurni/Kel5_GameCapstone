@@ -87,9 +87,12 @@ public class CharMovements : MonoBehaviour
 
     public void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, Speed);
-        anim.SetTrigger("Jump");
-        Grounded = false;
+        if (Grounded)
+        {
+            body.velocity = new Vector2(body.velocity.x, Speed);
+            anim.SetTrigger("Jump");
+            Grounded = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

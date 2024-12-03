@@ -26,12 +26,12 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.B) && coldownTimer > castCooldown)
+        if (Input.GetKey(KeyCode.S) && coldownTimer > castCooldown)
         {
             CastAttack();
         }
 
-        if (Input.GetKey(KeyCode.Q) && coldownTimer > attackColdown)
+        if (Input.GetKey(KeyCode.X) && coldownTimer > attackColdown)
         {
             Attack();
         }

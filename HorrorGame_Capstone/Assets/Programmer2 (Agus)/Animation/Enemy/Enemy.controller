@@ -260,9 +260,6 @@ AnimatorStateMachine:
     m_State: {fileID: -5890572486611267531}
     m_Position: {x: 30, y: -30, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 6270397338184552569}
-    m_Position: {x: 65, y: 35, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: -2348779392105864527}
     m_Position: {x: 502.44827, y: 16.241638, z: 0}
   m_ChildStateMachines: []
@@ -407,32 +404,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &6270397338184552569
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: RangedAttack
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 65952ddfe590883478c42ed5d1488fe8, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1101 &6557932281803504461
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
