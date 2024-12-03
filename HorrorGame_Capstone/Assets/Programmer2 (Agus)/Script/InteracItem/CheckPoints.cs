@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CheckPoints : MonoBehaviour
 {
@@ -8,12 +9,21 @@ public class CheckPoints : MonoBehaviour
     PlayerHealth player;
     public Transform respawnPoint;
 
-    public GameObject activeObject;
-    public GameObject passiveObject;
+    public SpriteRenderer spriteRenderer;
+    public Color activeColor = Color.yellow;
+    public Color inactiveColor = Color.white;
+    public float colorChangeSpeed = 1.0f;
+
+    private Color targetColor;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+    }
+
+    private void Start()
+    {
+        Deactivate();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,25 +37,26 @@ public class CheckPoints : MonoBehaviour
 
             lastCheckpoint = this;
             player.UpdateCheckPoint(respawnPoint.position);
-            if (activeObject != null)
-            {
-                activeObject.SetActive(true);
-            }
-            if (passiveObject != null)
-            {
-                passiveObject.SetActive(false);
-            }
+            Activate();
         }
     }
+
+    private void Activate()
+    {
+        targetColor = activeColor;
+    }
+
     private void Deactivate()
     {
-        if (passiveObject != null)
+        targetColor = inactiveColor;
+    }
+
+    private void Update()
+    {
+        // Mengubah warna sprite secara bertahap
+        if (spriteRenderer != null)
         {
-            passiveObject.SetActive(true);
-        }
-        if (activeObject != null)
-        {
-            activeObject.SetActive(false);
+            spriteRenderer.color = Color.Lerp(spriteRenderer.color, targetColor, colorChangeSpeed * Time.deltaTime);
         }
     }
 }
