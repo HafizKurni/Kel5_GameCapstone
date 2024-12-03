@@ -8,9 +8,11 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Health Settings")]
     [SerializeField] private float startingHealth = 100f;
+    [SerializeField] private float maxHealth;
     [SerializeField] private float deathAnimationDuration = 1f;
     [SerializeField] private Image healthBar;
     private Animator anim;
+    private CharMovements charMovements;
     public float currentHealth { get; private set; }
     public bool IsDead { get; private set; }
     Vector2 checkPointPos;
@@ -19,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
+        charMovements = GetComponent<CharMovements>();
         IsDead = false;
         UpdateHealthSlider();
     }
@@ -42,7 +45,6 @@ public class PlayerHealth : MonoBehaviour
         {
             IsDead = true;
             anim.SetTrigger("Die");
-            DisablePlayerMovement();
             StartCoroutine(HandleDeath());
         }
     }
@@ -52,6 +54,11 @@ public class PlayerHealth : MonoBehaviour
         if (IsDead) return;
         currentHealth = Mathf.Clamp(currentHealth + value, 0, startingHealth);
         UpdateHealthSlider();
+    }
+    public void IncreaseHealth(float amount)
+    {
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     }
 
     private void UpdateHealthSlider()
@@ -65,18 +72,26 @@ public class PlayerHealth : MonoBehaviour
     private IEnumerator HandleDeath()
     {
         yield return new WaitForSeconds(deathAnimationDuration);
-
+        DisablePlayerMovement();
         Respawn();
     }
 
     private void DisablePlayerMovement()
     {
-        PlayerMovement movement = GetComponent<PlayerMovement>();
-        if (movement != null)
+        if (charMovements != null)
         {
-            movement.enabled = false;
+            charMovements.enabled = false;
         }
     }
+
+    private void EnablePlayerMovementt()
+    {
+        if (charMovements != null)
+        {
+            charMovements.enabled = true;
+        }
+    }
+
 
     public void UpdateCheckPoint(Vector2 pos)
     {
@@ -88,7 +103,7 @@ public class PlayerHealth : MonoBehaviour
         transform.position = checkPointPos;
         anim.SetTrigger("Respawn");
         currentHealth = startingHealth;
-
+        EnablePlayerMovementt();
         UpdateHealthSlider();
     }
 }

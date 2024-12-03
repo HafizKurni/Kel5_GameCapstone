@@ -7,7 +7,6 @@ public class CharMovements : MonoBehaviour
     private Rigidbody2D body;
     public float Speed;
     private Animator anim;
-    private TrailRenderer trailRender;
     private bool Grounded;
 
     [Header("Dashing")]
@@ -29,7 +28,6 @@ public class CharMovements : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        trailRender = GetComponent<TrailRenderer>();
 
         playerInput.Enable();
     }
@@ -60,7 +58,6 @@ public class CharMovements : MonoBehaviour
         {
             isDashing = true;
             canDash = false;
-            trailRender.emitting = true;
             dashingDir = movementInput;
 
             if (dashingDir == Vector2.zero)
@@ -103,10 +100,17 @@ public class CharMovements : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            Grounded = false;
+        }
+    }
+
     private IEnumerator StopDashing()
     {
         yield return new WaitForSeconds(dashingTime);
-        trailRender.emitting = false;
         isDashing = false;
     }
 }
