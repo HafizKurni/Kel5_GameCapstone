@@ -4,9 +4,11 @@ using UnityEngine.InputSystem;
 
 public class CharMovements : MonoBehaviour
 {
-    private Rigidbody2D body;
+   
     public float Speed;
+    public float JumpForce;
     private Animator anim;
+    private Rigidbody2D body;
     private bool Grounded;
 
     [Header("Dashing")]
@@ -89,7 +91,7 @@ public class CharMovements : MonoBehaviour
     {
         if (Grounded)
         {
-            body.velocity = new Vector2(body.velocity.x, Speed);
+            body.velocity = new Vector2(body.velocity.x, JumpForce);
             anim.SetTrigger("Jump");
             Grounded = false;
         }
