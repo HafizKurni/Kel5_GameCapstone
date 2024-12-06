@@ -5,6 +5,7 @@ public class Bandit : MonoBehaviour {
 
     [SerializeField] float      m_speed = 4.0f;
     [SerializeField] float      m_jumpForce = 7.5f;
+    [SerializeField] private    UI_Inventory uiinventory;
 
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
@@ -12,12 +13,17 @@ public class Bandit : MonoBehaviour {
     private bool                m_grounded = false;
     private bool                m_combatIdle = false;
     private bool                m_isDead = false;
+    private  Inventory          inventory;
 
     // Use this for initialization
     void Start () {
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
+
+        // Inventory
+        inventory = new Inventory();
+        uiinventory.SetInventory(inventory);
     }
 	
 	// Update is called once per frame
