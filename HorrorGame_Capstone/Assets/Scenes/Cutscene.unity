@@ -243,6 +243,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 46dcadbb1c631494aa79e84aeebcf4f7, type: 3}
   - {fileID: 21300000, guid: e5e2b3ca43924d642ae5799b3c1f9775, type: 3}
   - {fileID: 21300000, guid: 04b6ff8a4b4d8bc4cb4f0daa9d0ac6eb, type: 3}
+  - {fileID: 21300000, guid: e941cdf5484884c0aae0f21c852d99c5, type: 3}
+  - {fileID: 21300000, guid: 7177934196f1146acb281bc5be35cd1e, type: 3}
+  - {fileID: 21300000, guid: 3923b735d3bd240389e19823aed54792, type: 3}
   fadeTime: 2
   fadefinished: 0
   timer1: 10

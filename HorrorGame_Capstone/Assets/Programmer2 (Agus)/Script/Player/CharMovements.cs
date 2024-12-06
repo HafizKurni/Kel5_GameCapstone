@@ -4,10 +4,11 @@ using UnityEngine.InputSystem;
 
 public class CharMovements : MonoBehaviour
 {
-    private Rigidbody2D body;
+   
     public float Speed;
+    public float JumpForce;
     private Animator anim;
-    private TrailRenderer trailRender;
+    private Rigidbody2D body;
     private bool Grounded;
 
     [Header("Dashing")]
@@ -29,7 +30,6 @@ public class CharMovements : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        trailRender = GetComponent<TrailRenderer>();
 
         playerInput.Enable();
     }
@@ -60,7 +60,6 @@ public class CharMovements : MonoBehaviour
         {
             isDashing = true;
             canDash = false;
-            trailRender.emitting = true;
             dashingDir = movementInput;
 
             if (dashingDir == Vector2.zero)
@@ -90,9 +89,12 @@ public class CharMovements : MonoBehaviour
 
     public void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, Speed);
-        anim.SetTrigger("Jump");
-        Grounded = false;
+        if (Grounded)
+        {
+            body.velocity = new Vector2(body.velocity.x, JumpForce);
+            anim.SetTrigger("Jump");
+            Grounded = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -103,10 +105,17 @@ public class CharMovements : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            Grounded = false;
+        }
+    }
+
     private IEnumerator StopDashing()
     {
         yield return new WaitForSeconds(dashingTime);
-        trailRender.emitting = false;
         isDashing = false;
     }
 }
