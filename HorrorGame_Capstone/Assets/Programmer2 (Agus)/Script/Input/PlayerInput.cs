@@ -64,9 +64,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""CastFire"",
+                    ""name"": ""CastUltimate"",
                     ""type"": ""Button"",
                     ""id"": ""274b9157-0928-4af2-ab39-75c4ddeeb95f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CastSkill"",
+                    ""type"": ""Button"",
+                    ""id"": ""cf3a74ef-1ddc-4765-8740-15819fb663e6"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -189,7 +198,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""CastFire"",
+                    ""action"": ""CastUltimate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b34e45c9-924e-4b0f-bcce-f32ddcd29872"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CastSkill"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -215,7 +235,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
-        m_Player_CastFire = m_Player.FindAction("CastFire", throwIfNotFound: true);
+        m_Player_CastUltimate = m_Player.FindAction("CastUltimate", throwIfNotFound: true);
+        m_Player_CastSkill = m_Player.FindAction("CastSkill", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
     }
 
@@ -287,7 +308,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Interaction;
-    private readonly InputAction m_Player_CastFire;
+    private readonly InputAction m_Player_CastUltimate;
+    private readonly InputAction m_Player_CastSkill;
     private readonly InputAction m_Player_Attack;
     public struct PlayerActions
     {
@@ -297,7 +319,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Interaction => m_Wrapper.m_Player_Interaction;
-        public InputAction @CastFire => m_Wrapper.m_Player_CastFire;
+        public InputAction @CastUltimate => m_Wrapper.m_Player_CastUltimate;
+        public InputAction @CastSkill => m_Wrapper.m_Player_CastSkill;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -320,9 +343,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Interaction.started += instance.OnInteraction;
             @Interaction.performed += instance.OnInteraction;
             @Interaction.canceled += instance.OnInteraction;
-            @CastFire.started += instance.OnCastFire;
-            @CastFire.performed += instance.OnCastFire;
-            @CastFire.canceled += instance.OnCastFire;
+            @CastUltimate.started += instance.OnCastUltimate;
+            @CastUltimate.performed += instance.OnCastUltimate;
+            @CastUltimate.canceled += instance.OnCastUltimate;
+            @CastSkill.started += instance.OnCastSkill;
+            @CastSkill.performed += instance.OnCastSkill;
+            @CastSkill.canceled += instance.OnCastSkill;
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
@@ -342,9 +368,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Interaction.started -= instance.OnInteraction;
             @Interaction.performed -= instance.OnInteraction;
             @Interaction.canceled -= instance.OnInteraction;
-            @CastFire.started -= instance.OnCastFire;
-            @CastFire.performed -= instance.OnCastFire;
-            @CastFire.canceled -= instance.OnCastFire;
+            @CastUltimate.started -= instance.OnCastUltimate;
+            @CastUltimate.performed -= instance.OnCastUltimate;
+            @CastUltimate.canceled -= instance.OnCastUltimate;
+            @CastSkill.started -= instance.OnCastSkill;
+            @CastSkill.performed -= instance.OnCastSkill;
+            @CastSkill.canceled -= instance.OnCastSkill;
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
@@ -371,7 +400,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnInteraction(InputAction.CallbackContext context);
-        void OnCastFire(InputAction.CallbackContext context);
+        void OnCastUltimate(InputAction.CallbackContext context);
+        void OnCastSkill(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
     }
 }

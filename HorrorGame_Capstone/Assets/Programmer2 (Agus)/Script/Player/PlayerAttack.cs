@@ -1,15 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private float castCooldown;
-    [SerializeField] private float attackColdown;
+    [SerializeField] private float utimateCD;
+    [SerializeField] private float skillCD;
     [SerializeField] private float damage;
     [SerializeField] private float attackRange;
     [SerializeField] private LayerMask enemyLayerMask;
-    public Animator anim;
+    private Animator anim;
     private PlayerMovement playerMovement;
     private bool IsAttacking;
     private float coldownTimer = Mathf.Infinity;
@@ -36,28 +37,38 @@ public class PlayerAttack : MonoBehaviour
             NoOfClick = 0;
         }
 
-        if (Input.GetKey(KeyCode.S) && coldownTimer > castCooldown)
+        if (Input.GetKeyDown(KeyCode.S) && coldownTimer > utimateCD)
         {
-            CastAttack();
+            CastUltimate();
         }
 
-        if (Input.GetKey(KeyCode.X) && coldownTimer > attackColdown)
+        if (Input.GetKeyDown(KeyCode.A) && coldownTimer > skillCD)
+        {
+            CastSkill();
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
         {
             lastClikTime = Time.deltaTime;
             NoOfClick++;
             if (NoOfClick == 1)
             {
                 anim.SetBool("Attack 1", true);
+                AudioManager.instance.PlaysSFX("MC_Sword");
             }
             NoOfClick = Mathf.Clamp(NoOfClick, 0, 3);
         }
         coldownTimer += Time.deltaTime;
     }
+
+
+
     public void Return1()
     {
         if (NoOfClick >= 2)
         {
             anim.SetBool("Attack 2", true);
+            AudioManager.instance.PlaysSFX("MC_Sword");
         }
         else
         {
@@ -70,6 +81,7 @@ public class PlayerAttack : MonoBehaviour
         if (NoOfClick >= 3)
         {
             anim.SetBool("Attack 3", true);
+            AudioManager.instance.PlaysSFX("MC_Sword");
         }
         else
         {
@@ -84,14 +96,17 @@ public class PlayerAttack : MonoBehaviour
          anim.SetBool("Attack 3", false);
          NoOfClick = 0;
     }
-    public void CastAttack()
+    public void CastUltimate()
     {
-        anim.SetTrigger("CastFire");
+        anim.SetTrigger("CastUlti");
+        AudioManager.instance.PlaysSFX("MC_Ulti");
+
         coldownTimer = 0;
 
         fireBalls[CheckFireball()].transform.position = firePoint.position;
         fireBalls[CheckFireball()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
+
 
     public void Attack()
     {
@@ -104,6 +119,14 @@ public class PlayerAttack : MonoBehaviour
             DealDamage(enemy);
         }
     }
+    public void CastSkill()
+    {
+        anim.SetTrigger("CastSkill");
+        AudioManager.instance.PlaysSFX("MC_Skill");
+
+        coldownTimer = 0;
+    }    
+    
     private void DealDamage(Collider2D enemyCollider)
     {
         EnemyHealth enemyHealth = enemyCollider.GetComponent<EnemyHealth>();

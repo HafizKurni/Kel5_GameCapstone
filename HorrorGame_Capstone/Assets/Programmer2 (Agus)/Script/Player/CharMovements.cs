@@ -10,6 +10,8 @@ public class CharMovements : MonoBehaviour
     private Animator anim;
     private Rigidbody2D body;
     private bool Grounded;
+    private int jumpRemaining;
+    public int maxJumpCount;
 
     [Header("Dashing")]
     [SerializeField] private float dashingVelocity = 14f;
@@ -30,7 +32,7 @@ public class CharMovements : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
+        jumpRemaining = maxJumpCount;
         playerInput.Enable();
     }
 
@@ -51,7 +53,7 @@ public class CharMovements : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if (playerInput.Player.Jump.triggered && Grounded)
+        if (playerInput.Player.Jump.triggered && Grounded && maxJumpCount > 0)
         {
             Jump();
         }
@@ -89,10 +91,11 @@ public class CharMovements : MonoBehaviour
 
     public void Jump()
     {
-        if (Grounded)
+        if (Grounded && maxJumpCount > 0)
         {
             body.velocity = new Vector2(body.velocity.x, JumpForce);
             anim.SetTrigger("Jump");
+            jumpRemaining--;
             Grounded = false;
         }
     }
@@ -102,6 +105,7 @@ public class CharMovements : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             Grounded = true;
+            jumpRemaining = maxJumpCount;
         }
     }
 

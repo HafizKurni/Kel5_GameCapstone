@@ -42,9 +42,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "CastFire",
+                    "name": "CastUltimate",
                     "type": "Button",
                     "id": "274b9157-0928-4af2-ab39-75c4ddeeb95f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CastSkill",
+                    "type": "Button",
+                    "id": "cf3a74ef-1ddc-4765-8740-15819fb663e6",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -167,7 +176,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "CastFire",
+                    "action": "CastUltimate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b34e45c9-924e-4b0f-bcce-f32ddcd29872",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CastSkill",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
