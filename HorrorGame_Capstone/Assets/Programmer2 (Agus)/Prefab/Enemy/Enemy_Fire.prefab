@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
-  range: 3
+  range: 5
   damage: 1
   firepoint: {fileID: 2153940973735356157}
   fireballs:
@@ -352,7 +352,7 @@ MonoBehaviour:
   - {fileID: 346916477068958569}
   - {fileID: 4667602523036293424}
   - {fileID: 3316174394328968490}
-  colliderDistance: 4
+  colliderDistance: 6
   boxCollider: {fileID: 79243343088700755}
   playerLayer:
     serializedVersion: 2
@@ -421,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8236524696750094190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -638,7 +638,7 @@ Transform:
   m_GameObject: {fileID: 9199314810971427527}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.39, y: -3.22, z: 0}
+  m_LocalPosition: {x: 8, y: -3.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

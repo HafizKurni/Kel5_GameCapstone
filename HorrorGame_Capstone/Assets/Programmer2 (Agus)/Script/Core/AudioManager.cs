@@ -55,10 +55,10 @@ public class AudioManager : MonoBehaviour
         switch (sceneName)
         {
             case "MainMenu":
-                PlayMusic("Ambience"); // Ganti dengan nama musik tema menu Anda
+                PlayMusic("MainMenu"); // Ganti dengan nama musik tema menu Anda
                 break;
-            case "Gameplay2":
-                PlayMusic("BGM_GamePlay"); // Ganti dengan nama musik permainan Anda
+            case "SampleScene":
+                PlayMusic("GamePlay"); // Ganti dengan nama musik permainan Anda
                 break;
             default:
                 break;

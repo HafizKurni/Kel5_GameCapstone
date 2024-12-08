@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.deltaTime - lastClikTime > maxComboDelay)
+        if (Time.time - lastClikTime > maxComboDelay)
         {
             NoOfClick = 0;
         }
@@ -49,7 +49,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            lastClikTime = Time.deltaTime;
+            lastClikTime = Time.time;
             NoOfClick++;
             if (NoOfClick == 1)
             {
