@@ -57,5 +57,6 @@
         "Temp/": true
     },
     "dotnet.defaultSolution": "HorrorGame_Capstone.sln",
-    "dotnet.preferCSharpExtension": true
+    "dotnet.preferCSharpExtension": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt"
 }
