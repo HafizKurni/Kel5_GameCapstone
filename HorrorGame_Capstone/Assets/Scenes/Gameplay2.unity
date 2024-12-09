@@ -3139,7 +3139,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.162361, y: 0.88273996, z: -11}
+  m_LocalPosition: {x: -21.17155, y: 0.88273, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26491,6 +26491,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 26777445183865649, guid: 88b5a1ea49636cc43992d5a5f72c01aa, type: 3}
+      propertyPath: pauseScreen
+      value: 
+      objectReference: {fileID: 1831534188}
+    - target: {fileID: 26777445183865649, guid: 88b5a1ea49636cc43992d5a5f72c01aa, type: 3}
+      propertyPath: currentHealthBar
+      value: 
+      objectReference: {fileID: 920718828605120823}
+    - target: {fileID: 26777445183865649, guid: 88b5a1ea49636cc43992d5a5f72c01aa, type: 3}
+      propertyPath: pauseCanvasGroup
+      value: 
+      objectReference: {fileID: 1831534192}
     - target: {fileID: 524917390629043219, guid: 88b5a1ea49636cc43992d5a5f72c01aa, type: 3}
       propertyPath: m_Name
       value: Player
@@ -26706,6 +26718,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 920718828605120825}
   m_SourcePrefab: {fileID: 100100000, guid: 88b5a1ea49636cc43992d5a5f72c01aa, type: 3}
+--- !u!114 &920718828605120823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4020668205686389407, guid: 88b5a1ea49636cc43992d5a5f72c01aa, type: 3}
+  m_PrefabInstance: {fileID: 920718828605120822}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!225 &920718828605120825
 CanvasGroup:
   m_ObjectHideFlags: 0
