@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Tambahkan ini untuk Scene Management
+using UnityEngine.SceneManagement;
 
 public class HealthBarPlayer : MonoBehaviour
 {
@@ -12,13 +12,12 @@ public class HealthBarPlayer : MonoBehaviour
     [SerializeField] private Image currentHealthBar;
 
     [Header("Pause")]
-    [SerializeField] private GameObject pauseScreen; // GameObject PausePanel
-    [SerializeField] private CanvasGroup pauseCanvasGroup; // CanvasGroup PausePanel
+    [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private CanvasGroup pauseCanvasGroup;
 
     void Start()
     {
         totalHealthBar.fillAmount = playerHealth.currentHealth / 10;
-        // Pastikan PausePanel dalam kondisi nonaktif di awal
         PauseGame(false);
     }
 
@@ -51,7 +50,7 @@ public class HealthBarPlayer : MonoBehaviour
     // Fungsi untuk memuat scene tertentu
     public void LoadScene(string sceneName)
     {
-        Time.timeScale = 1; // Pastikan waktu berjalan normal sebelum memuat scene baru
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
 }
