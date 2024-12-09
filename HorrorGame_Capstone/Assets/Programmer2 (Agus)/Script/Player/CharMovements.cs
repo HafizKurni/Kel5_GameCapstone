@@ -4,18 +4,21 @@ using UnityEngine.InputSystem;
 
 public class CharMovements : MonoBehaviour
 {
-   
+    [Header("Movement")]
     public float Speed;
-    public float JumpForce;
-    private Animator anim;
-    private Rigidbody2D body;
-    private bool Grounded;
-    private int jumpRemaining;
-    public int maxJumpCount;
 
     [Header("Dashing")]
     [SerializeField] private float dashingVelocity = 14f;
     [SerializeField] private float dashingTime = 0.5f;
+
+    [Header("Jump")]
+    public float JumpForce;
+    public int maxJumpCount;
+    private bool Grounded;
+    private int jumpRemaining;
+
+    private Animator anim;
+    private Rigidbody2D body;
     private Vector2 dashingDir;
     private bool isDashing;
     private bool canDash = true;
@@ -39,11 +42,18 @@ public class CharMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 movementInput = playerInput.Player.Movement.ReadValue<Vector2>();
-        bool dashInput = playerInput.Player.Dash.triggered;
+        HandleMovement();
+        HandleJump();
+        HandleDash();
+        UpdateAnimation();
+    }
 
+    private void HandleMovement()
+    {
+        Vector2 movementInput = playerInput.Player.Movement.ReadValue<Vector2>();
         body.velocity = new Vector2(movementInput.x * Speed, body.velocity.y);
 
+        // Flip character based on movement direction
         if (movementInput.x > 0.01f)
         {
             transform.localScale = Vector3.one;
@@ -52,18 +62,27 @@ public class CharMovements : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
+    }
 
-        if (playerInput.Player.Jump.triggered && Grounded && maxJumpCount > 0)
+    private void HandleJump()
+    {
+        if (playerInput.Player.Jump.triggered && Grounded && jumpRemaining > 0)
         {
             Jump();
         }
+    }
+
+    private void HandleDash()
+    {
+        bool dashInput = playerInput.Player.Dash.triggered;
 
         if (dashInput && canDash)
         {
             isDashing = true;
             canDash = false;
-            dashingDir = movementInput;
+            dashingDir = playerInput.Player.Movement.ReadValue<Vector2>();
 
+            // If no movement input, dash in the direction the character is facing
             if (dashingDir == Vector2.zero)
             {
                 dashingDir = new Vector2(transform.localScale.x, 0);
@@ -71,8 +90,6 @@ public class CharMovements : MonoBehaviour
 
             StartCoroutine(StopDashing());
         }
-
-        anim.SetBool("Dashing", isDashing);
 
         if (isDashing)
         {
@@ -84,19 +101,15 @@ public class CharMovements : MonoBehaviour
         {
             canDash = true;
         }
-
-        anim.SetBool("Walk", movementInput != Vector2.zero);
-        anim.SetBool("Grounded", Grounded);
     }
 
     public void Jump()
     {
-        if (Grounded && maxJumpCount > 0)
+        if (jumpRemaining > 0)
         {
             body.velocity = new Vector2(body.velocity.x, JumpForce);
             anim.SetTrigger("Jump");
             jumpRemaining--;
-            Grounded = false;
         }
     }
 
@@ -105,7 +118,7 @@ public class CharMovements : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             Grounded = true;
-            jumpRemaining = maxJumpCount;
+            jumpRemaining = maxJumpCount; // Reset jump count when landing
         }
     }
 
@@ -113,7 +126,7 @@ public class CharMovements : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Grounded = false;
+            Grounded = false; // Set Grounded to false when leaving the ground
         }
     }
 
@@ -121,5 +134,12 @@ public class CharMovements : MonoBehaviour
     {
         yield return new WaitForSeconds(dashingTime);
         isDashing = false;
+    }
+
+    private void UpdateAnimation()
+    {
+        anim.SetBool("Dashing", isDashing);
+        anim.SetBool("Walk", body.velocity.x != 0);
+        anim.SetBool("Grounded", Grounded);
     }
 }
