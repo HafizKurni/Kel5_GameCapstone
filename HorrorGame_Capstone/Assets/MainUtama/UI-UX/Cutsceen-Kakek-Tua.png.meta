@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa88dfd13a3b4e946b7b77522fc4671c
+guid: 389b9162aab8f454ba327ad110f9ed9c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,112 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: UHD_0
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 943
-        width: 375
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9026e726ba4551a41b0a82e4ec05b693
-      internalID: -1945382843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UHD_1
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 922
-        width: 284
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1d21d9b19b92a445b6ac6c19582d5e3
-      internalID: -902120481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UHD_2
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 756
-        width: 375
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e3052b0362b9a448ad2489faa234c2d
-      internalID: -1346005657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UHD_3
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 735
-        width: 284
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6686f81db941944492f76b8df91de62
-      internalID: -1195680382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UHD_4
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 871
-        width: 39
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59a84326634f0e048888c3b224c1e023
-      internalID: 1065586069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -224,12 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      UHD_0: -1945382843
-      UHD_1: -902120481
-      UHD_2: -1346005657
-      UHD_3: -1195680382
-      UHD_4: 1065586069
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
