@@ -1,0 +1,1082 @@
+fileFormatVersion: 2
+guid: 370d1ce5376d0974490e9e3dd81e0bf5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 125
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ultsprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2964
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36c1d45a3a4cd0468e8b72284002411
+      internalID: 502795408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_1
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 2964
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab0d5cfbfbce9f4a949355bbed855d0
+      internalID: -1231525402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_2
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 2964
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b02069fe4b39e34f83c7ac39c2d10bc
+      internalID: -292996417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_3
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 2964
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58c7c0150f392c46a7f1af531271b27
+      internalID: -192576373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_4
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 2964
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789a03d4c90d3dd43bc6fefdfdcf3932
+      internalID: 647280855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_5
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 2964
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a56228743ad3a4e9151806ddd81d12
+      internalID: 51495173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_6
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 2964
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b691b4fb3baa641ad94f7fdad8c4e1
+      internalID: 1797773186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2470
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd358e5e826f9dd489070c7ecb021251
+      internalID: 1488030475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_8
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 2470
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bb6531ec8f80147a311b003ff52bfb
+      internalID: 1549448912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_9
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 2470
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ff3a792417fba429736738486d2bad
+      internalID: -47685022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_10
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 2470
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fcc93aa3a527a4396f63b354844457
+      internalID: -689313323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_11
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 2470
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c471ace6f9b48f54997766474a74c320
+      internalID: 1648998338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_12
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 2470
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334db1194fc6a0a4d97471521d0f1449
+      internalID: 403374595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_13
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 2470
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581293d073728104691afae50128bfa2
+      internalID: 1432423000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1976
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3686357c9409f8842843bab46d253388
+      internalID: 508719282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_15
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1976
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd96dbe67d203a41b3362a680c9a925
+      internalID: 1937765760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_16
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 1976
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf34653d9dff8942a281d713a699256
+      internalID: -725458943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_17
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1976
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2e045ec3c267f469e01cb8245c2b60
+      internalID: -312736666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_18
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1976
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc568e0a69339574484492a8d15443d3
+      internalID: -926349549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_19
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 1976
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6471bea3ab16294ba10756dc1c0fdd8
+      internalID: 298247374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_20
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 1976
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc09bc7c53d0cb24a8a81129a4f84e2e
+      internalID: 1433107225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1482
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3a3f375aa59b043a969a7ac1b95b5e
+      internalID: -1008377078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_22
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1482
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7a527ec67fccf4e9273369a099188e
+      internalID: 1568790743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_23
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 1482
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cc79c5a720e034eb18bac3533471c1
+      internalID: -489831628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_24
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1482
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6540e9fdbda6f5d4cb53adb306e842d2
+      internalID: 1938323001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_25
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1482
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdc13e8a5e171a41b732a86df710f0e
+      internalID: -1428049198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_26
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 1482
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6980fa2e6b8c53044b4229a5eb538c50
+      internalID: -211486670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_27
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 1482
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf4f101209812f4ca4eb7078b7eae79
+      internalID: -1757441155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 988
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b35f3f9992f06e40828395499919185
+      internalID: 1248953712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_29
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 988
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa65b3defe5ef34db517d265d42a6d2
+      internalID: 315625876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_30
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 988
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad2c0ecd4c628f42910b5343bdc161f
+      internalID: -1626461447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_31
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 988
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29227e1c5877424f883b40321cd67c8
+      internalID: -1179648866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_32
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 988
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c39a0c652ef0264da18f78a2c0d51e9
+      internalID: 1118826467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_33
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 988
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fae25828262734fb75c41deef08be8
+      internalID: 1671727856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_34
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 988
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617ab20d4d8ae9341acb42640ae5cd1c
+      internalID: 656400551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 494
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e0cc541a4883c47bac13d24bd821d7
+      internalID: -1965931959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_36
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 494
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfbaad68de601e4a8bf79e6bf2b269b
+      internalID: 236231255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_37
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 494
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf574b6fb435b2c4c88e7b780e89fdd5
+      internalID: 27096488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_38
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 494
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76ed73636378e247ac64aafe13ec9aa
+      internalID: 887725077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_39
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 494
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a987d16cbfef434f8a504414b51520f
+      internalID: -81168721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_40
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 494
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2208476e76bf73647a527bb6a08bc79f
+      internalID: -602848628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_41
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 494
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19037f3f105716544b51a896fb4a2926
+      internalID: -1680730617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1fbd72cf3eda24cb85c39930903fab
+      internalID: -1677148825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ultsprite_43
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 0
+        width: 494
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e4c1647f472274194e9ca371360cb2
+      internalID: -107287965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ultsprite_0: 502795408
+      ultsprite_1: -1231525402
+      ultsprite_10: -689313323
+      ultsprite_11: 1648998338
+      ultsprite_12: 403374595
+      ultsprite_13: 1432423000
+      ultsprite_14: 508719282
+      ultsprite_15: 1937765760
+      ultsprite_16: -725458943
+      ultsprite_17: -312736666
+      ultsprite_18: -926349549
+      ultsprite_19: 298247374
+      ultsprite_2: -292996417
+      ultsprite_20: 1433107225
+      ultsprite_21: -1008377078
+      ultsprite_22: 1568790743
+      ultsprite_23: -489831628
+      ultsprite_24: 1938323001
+      ultsprite_25: -1428049198
+      ultsprite_26: -211486670
+      ultsprite_27: -1757441155
+      ultsprite_28: 1248953712
+      ultsprite_29: 315625876
+      ultsprite_3: -192576373
+      ultsprite_30: -1626461447
+      ultsprite_31: -1179648866
+      ultsprite_32: 1118826467
+      ultsprite_33: 1671727856
+      ultsprite_34: 656400551
+      ultsprite_35: -1965931959
+      ultsprite_36: 236231255
+      ultsprite_37: 27096488
+      ultsprite_38: 887725077
+      ultsprite_39: -81168721
+      ultsprite_4: 647280855
+      ultsprite_40: -602848628
+      ultsprite_41: -1680730617
+      ultsprite_42: -1677148825
+      ultsprite_43: -107287965
+      ultsprite_5: 51495173
+      ultsprite_6: 1797773186
+      ultsprite_7: 1488030475
+      ultsprite_8: 1549448912
+      ultsprite_9: -47685022
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

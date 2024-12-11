@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5875429494919792592}
   - component: {fileID: 886601351721459267}
   m_Layer: 0
-  m_Name: FireBall
+  m_Name: SlashAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,7 +170,7 @@ Animator:
   m_GameObject: {fileID: 269431969044270831}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 87b6a75b34323624d989836efa345125, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5cd9eebde6b60714ebf810c6e964832a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
