@@ -4,14 +4,21 @@ using UnityEngine.InputSystem;
 
 public class CharMovements : MonoBehaviour
 {
-    private Rigidbody2D body;
+    [Header("Movement")]
     public float Speed;
-    private Animator anim;
-    private bool Grounded;
 
     [Header("Dashing")]
     [SerializeField] private float dashingVelocity = 14f;
     [SerializeField] private float dashingTime = 0.5f;
+
+    [Header("Jump")]
+    public float JumpForce;
+    public int maxJumpCount;
+    private bool Grounded;
+    private int jumpRemaining;
+
+    private Animator anim;
+    private Rigidbody2D body;
     private Vector2 dashingDir;
     private bool isDashing;
     private bool canDash = true;
@@ -28,18 +35,25 @@ public class CharMovements : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
+        jumpRemaining = maxJumpCount;
         playerInput.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 movementInput = playerInput.Player.Movement.ReadValue<Vector2>();
-        bool dashInput = playerInput.Player.Dash.triggered;
+        HandleMovement();
+        HandleJump();
+        HandleDash();
+        UpdateAnimation();
+    }
 
+    private void HandleMovement()
+    {
+        Vector2 movementInput = playerInput.Player.Movement.ReadValue<Vector2>();
         body.velocity = new Vector2(movementInput.x * Speed, body.velocity.y);
 
+        // Flip character based on movement direction
         if (movementInput.x > 0.01f)
         {
             transform.localScale = Vector3.one;
@@ -48,18 +62,27 @@ public class CharMovements : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
+    }
 
-        if (playerInput.Player.Jump.triggered && Grounded)
+    private void HandleJump()
+    {
+        if (playerInput.Player.Jump.triggered && Grounded && jumpRemaining > 0)
         {
             Jump();
         }
+    }
+
+    private void HandleDash()
+    {
+        bool dashInput = playerInput.Player.Dash.triggered;
 
         if (dashInput && canDash)
         {
             isDashing = true;
             canDash = false;
-            dashingDir = movementInput;
+            dashingDir = playerInput.Player.Movement.ReadValue<Vector2>();
 
+            // If no movement input, dash in the direction the character is facing
             if (dashingDir == Vector2.zero)
             {
                 dashingDir = new Vector2(transform.localScale.x, 0);
@@ -67,8 +90,6 @@ public class CharMovements : MonoBehaviour
 
             StartCoroutine(StopDashing());
         }
-
-        anim.SetBool("Dashing", isDashing);
 
         if (isDashing)
         {
@@ -80,18 +101,15 @@ public class CharMovements : MonoBehaviour
         {
             canDash = true;
         }
-
-        anim.SetBool("Walk", movementInput != Vector2.zero);
-        anim.SetBool("Grounded", Grounded);
     }
 
     public void Jump()
     {
-        if (Grounded)
+        if (jumpRemaining > 0)
         {
-            body.velocity = new Vector2(body.velocity.x, Speed);
+            body.velocity = new Vector2(body.velocity.x, JumpForce);
             anim.SetTrigger("Jump");
-            Grounded = false;
+            jumpRemaining--;
         }
     }
 
@@ -100,6 +118,7 @@ public class CharMovements : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             Grounded = true;
+            jumpRemaining = maxJumpCount; // Reset jump count when landing
         }
     }
 
@@ -107,7 +126,7 @@ public class CharMovements : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Grounded = false;
+            Grounded = false; // Set Grounded to false when leaving the ground
         }
     }
 
@@ -115,5 +134,12 @@ public class CharMovements : MonoBehaviour
     {
         yield return new WaitForSeconds(dashingTime);
         isDashing = false;
+    }
+
+    private void UpdateAnimation()
+    {
+        anim.SetBool("Dashing", isDashing);
+        anim.SetBool("Walk", body.velocity.x != 0);
+        anim.SetBool("Grounded", Grounded);
     }
 }
