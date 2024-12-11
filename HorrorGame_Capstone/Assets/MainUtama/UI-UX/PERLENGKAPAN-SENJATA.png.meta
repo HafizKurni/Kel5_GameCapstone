@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PERLENGKAPAN-SENJATA_0
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 438
+        width: 158
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62fb61166b41e10439139228b8ee7126
+      internalID: -298699036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERLENGKAPAN-SENJATA_1
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 442
+        width: 310
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0640d64f6191ce4a8c4835ec2c2d9ee
+      internalID: -1993959057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +161,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PERLENGKAPAN-SENJATA_0: -298699036
+      PERLENGKAPAN-SENJATA_1: -1993959057
+      PERLENGKAPAN-SENJATA_2: -1411108410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

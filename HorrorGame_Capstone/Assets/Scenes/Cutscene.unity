@@ -252,8 +252,8 @@ MonoBehaviour:
   - {fileID: -544336278, guid: 590cd4462ef7d484ea3fff553b9e59c4, type: 3}
   - {fileID: -108846405, guid: 590cd4462ef7d484ea3fff553b9e59c4, type: 3}
   - {fileID: -1291700494, guid: 33dc4fdab09e1fb48ae243fe5e7b53c9, type: 3}
-  - {fileID: -493927775, guid: 590cd4462ef7d484ea3fff553b9e59c4, type: 3}
   - {fileID: 971939989, guid: 590cd4462ef7d484ea3fff553b9e59c4, type: 3}
+  - {fileID: 566418647, guid: 590cd4462ef7d484ea3fff553b9e59c4, type: 3}
   - {fileID: -1938199434, guid: 33dc4fdab09e1fb48ae243fe5e7b53c9, type: 3}
   fadeTime: 0.3
   photoDisplayTime: 3

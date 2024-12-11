@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8d10468a123c504c90ce5934d47eccb
+guid: 815ade6eac40c7345a04beb1dd675f4c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PERLENGKAPAN-BARANG_0
+      name: PERLENGKAPAN_0
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 850
+        width: 834
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76d6114283ab9d46ae824e27b400bbc
+      internalID: 1658715880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERLENGKAPAN_1
       rect:
         serializedVersion: 2
         x: 683
-        y: 766
+        y: 758
         width: 173
-        height: 34
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c790d26083684447aeaa5701d58f4e8
-      internalID: -1754062794
+      spriteID: ced0dde5dd6ab5240b7ba4d1e3c1d7ec
+      internalID: -1006507193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PERLENGKAPAN-BARANG_1
+      name: PERLENGKAPAN_2
       rect:
         serializedVersion: 2
         x: 912
-        y: 766
+        y: 758
         width: 95
-        height: 34
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abced80d49411b2409be02414b7e4c16
-      internalID: -896385902
+      spriteID: 32d6dd228195c594498e22e497ca80bb
+      internalID: -1176082974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PERLENGKAPAN-BARANG_2
+      name: PERLENGKAPAN_3
       rect:
         serializedVersion: 2
         x: 1062
-        y: 757
+        y: 758
         width: 187
-        height: 43
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fae22517c1c29eb4bb30c70665e11824
-      internalID: 700530686
+      spriteID: db61f324ceaa32c49927dce9b51c7776
+      internalID: 1626216979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PERLENGKAPAN-BARANG_3
+      name: PERLENGKAPAN_4
       rect:
         serializedVersion: 2
         x: 738
@@ -187,18 +208,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dd063f2854dff34d9c894eaf45fe287
-      internalID: 93244670
+      spriteID: b1df3a3e66fe6c44cbf978c21b1a07a4
+      internalID: 1755661236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PERLENGKAPAN-BARANG_4
+      name: PERLENGKAPAN_5
       rect:
         serializedVersion: 2
-        x: 949
-        y: 533
+        x: 959
+        y: 512
         width: 60
         height: 55
       alignment: 0
@@ -208,19 +229,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7332c7fdc4df034188bd612e6cf6be2
-      internalID: -279154140
+      spriteID: 7d61705824443bd4e8442085a93ac579
+      internalID: 500364357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PERLENGKAPAN-BARANG_5
+      name: PERLENGKAPAN_6
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 577
-        width: 145
+        x: 1030
+        y: 529
+        width: 269
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -229,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cef1499cc75c7b4aaeb974646252b12
-      internalID: 99784863
+      spriteID: 58fbc92e3fbf31b41bd92eaf8790798a
+      internalID: -865515129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PERLENGKAPAN-BARANG_6
+      name: PERLENGKAPAN_7
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 540
-        width: 145
-        height: 21
+        x: 136
+        y: 871
+        width: 39
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,19 +271,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eb048e1cf0864143bab67dfe69e2900
-      internalID: 1185087531
+      spriteID: 844d91affcfe7a74493016d523530d5a
+      internalID: 1855276497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PERLENGKAPAN-BARANG_7
+      name: PERLENGKAPAN_8
       rect:
         serializedVersion: 2
-        x: 950
-        y: 483
-        width: 190
+        x: 869
+        y: 96
+        width: 181
         height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -271,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 199486ec1cb06f346982e17216c55eb4
-      internalID: -753429293
+      spriteID: 44e6be27ebd53954a8026681ac1145b6
+      internalID: 795737314
       vertices: []
       indices: 
       edges: []
@@ -288,14 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PERLENGKAPAN-BARANG_0: -1754062794
-      PERLENGKAPAN-BARANG_1: -896385902
-      PERLENGKAPAN-BARANG_2: 700530686
-      PERLENGKAPAN-BARANG_3: 93244670
-      PERLENGKAPAN-BARANG_4: -279154140
-      PERLENGKAPAN-BARANG_5: 99784863
-      PERLENGKAPAN-BARANG_6: 1185087531
-      PERLENGKAPAN-BARANG_7: -753429293
+      PERLENGKAPAN_0: 1658715880
+      PERLENGKAPAN_1: -1006507193
+      PERLENGKAPAN_2: -1176082974
+      PERLENGKAPAN_3: 1626216979
+      PERLENGKAPAN_4: 1755661236
+      PERLENGKAPAN_5: 500364357
+      PERLENGKAPAN_6: -865515129
+      PERLENGKAPAN_7: 1855276497
+      PERLENGKAPAN_8: 795737314
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

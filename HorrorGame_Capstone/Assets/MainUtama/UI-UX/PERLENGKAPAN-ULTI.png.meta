@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PERLENGKAPAN-ULTI_0
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 438
+        width: 158
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1936e2014437dc14c89712e9c4b72a01
+      internalID: -1195678471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERLENGKAPAN-ULTI_1
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 577
+        width: 269
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ac207c0028d2c49959c0a4b3aaa499
+      internalID: 1835538510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERLENGKAPAN-ULTI_2
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 540
+        width: 269
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6017685e354ed114a8ee43412eb70f07
+      internalID: 545710517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERLENGKAPAN-ULTI_3
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 490
+        width: 182
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a9ebc0023f8f24db4c92f58793132a
+      internalID: 899419068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PERLENGKAPAN-ULTI_0: -1195678471
+      PERLENGKAPAN-ULTI_1: 1835538510
+      PERLENGKAPAN-ULTI_2: 545710517
+      PERLENGKAPAN-ULTI_3: 899419068
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
