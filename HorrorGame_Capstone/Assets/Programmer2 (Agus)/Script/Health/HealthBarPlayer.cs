@@ -15,10 +15,19 @@ public class HealthBarPlayer : MonoBehaviour
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private CanvasGroup pauseCanvasGroup;
 
+    [Header("UI Buttons")]
+    [SerializeField] private Button lanjutButton; // Referensi ke tombol "Lanjut btn"
+
     void Start()
     {
         totalHealthBar.fillAmount = playerHealth.currentHealth / 10;
         PauseGame(false);
+
+        // Assign fungsi resume ke tombol "Lanjut btn"
+        if (lanjutButton != null)
+        {
+            lanjutButton.onClick.AddListener(() => PauseGame(false));
+        }
     }
 
     void Update()

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 590cd4462ef7d484ea3fff553b9e59c4
+guid: 33dc4fdab09e1fb48ae243fe5e7b53c9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,127 +110,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Subtitle_1
+      name: perbaikan-subtitle_0
       rect:
         serializedVersion: 2
         x: 508
-        y: 132
+        y: 76
         width: 905
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6716a29d4fded18449ebedae5a38743b
-      internalID: -108846405
+      spriteID: 29b8dec6aeaffc447babb7939bec1cd1
+      internalID: -1291700494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Subtitle_2
+      name: perbaikan-subtitle_1
       rect:
         serializedVersion: 2
-        x: 508
-        y: 192
+        x: 881
+        y: 117
         width: 905
-        height: 23
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab653abe1d77c146a91958c4b424121
-      internalID: -493927775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Subtitle_3
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 244
-        width: 905
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a15b1770cb5cbba47a621d648e1f3944
-      internalID: 971939989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Subtitle_4
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 302
-        width: 905
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af2fa2f532d42bc4b96c90db9560dcbb
-      internalID: 566418647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Subtitle_0
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 73
-        width: 905
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07fcf42daf1eaad4f924affde4ac6fcf
-      internalID: -544336278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Subtitle_5
-      rect:
-        serializedVersion: 2
-        x: 843
-        y: 774
-        width: 234
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3fcd9118cf15f54e9302d48773cef09
-      internalID: -1880270246
+      spriteID: 25d218869408fd14187d8dc283b4d597
+      internalID: -1938199434
       vertices: []
       indices: 
       edges: []
@@ -246,12 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Subtitle_0: -544336278
-      Subtitle_1: -108846405
-      Subtitle_2: -493927775
-      Subtitle_3: 971939989
-      Subtitle_4: 566418647
-      Subtitle_5: -1880270246
+      perbaikan-subtitle_0: -1291700494
+      perbaikan-subtitle_1: -1938199434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

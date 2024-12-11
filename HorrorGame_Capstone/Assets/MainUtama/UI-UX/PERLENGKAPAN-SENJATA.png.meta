@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 590cd4462ef7d484ea3fff553b9e59c4
+guid: dbb8d40729166a64e8a4d72b8b4fb280
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,127 +110,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Subtitle_1
+      name: PERLENGKAPAN-SENJATA_0
       rect:
         serializedVersion: 2
-        x: 508
-        y: 132
-        width: 905
-        height: 23
+        x: 738
+        y: 438
+        width: 158
+        height: 203
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6716a29d4fded18449ebedae5a38743b
-      internalID: -108846405
+      spriteID: 62fb61166b41e10439139228b8ee7126
+      internalID: -298699036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Subtitle_2
+      name: PERLENGKAPAN-SENJATA_1
       rect:
         serializedVersion: 2
-        x: 508
-        y: 192
-        width: 905
-        height: 23
+        x: 952
+        y: 442
+        width: 310
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab653abe1d77c146a91958c4b424121
-      internalID: -493927775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Subtitle_3
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 244
-        width: 905
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a15b1770cb5cbba47a621d648e1f3944
-      internalID: 971939989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Subtitle_4
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 302
-        width: 905
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af2fa2f532d42bc4b96c90db9560dcbb
-      internalID: 566418647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Subtitle_0
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 73
-        width: 905
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07fcf42daf1eaad4f924affde4ac6fcf
-      internalID: -544336278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Subtitle_5
-      rect:
-        serializedVersion: 2
-        x: 843
-        y: 774
-        width: 234
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3fcd9118cf15f54e9302d48773cef09
-      internalID: -1880270246
+      spriteID: e0640d64f6191ce4a8c4835ec2c2d9ee
+      internalID: -1993959057
       vertices: []
       indices: 
       edges: []
@@ -246,12 +162,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Subtitle_0: -544336278
-      Subtitle_1: -108846405
-      Subtitle_2: -493927775
-      Subtitle_3: 971939989
-      Subtitle_4: 566418647
-      Subtitle_5: -1880270246
+      PERLENGKAPAN-SENJATA_0: -298699036
+      PERLENGKAPAN-SENJATA_1: -1993959057
+      PERLENGKAPAN-SENJATA_2: -1411108410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
