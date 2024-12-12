@@ -24,6 +24,11 @@ public class Bandit : MonoBehaviour {
         // Inventory
         inventory = new Inventory();
         uiinventory.SetInventory(inventory);
+
+        // Tes spawn item
+        ItemWorld.SpawnItemWorld(new Vector3(-2, -2), new Item{itemType = Item.ItemType.Coin, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(0, -2), new Item{itemType = Item.ItemType.HealthPotion, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, -2), new Item{itemType = Item.ItemType.ManaPotion, amount = 1});
     }
 	
 	// Update is called once per frame

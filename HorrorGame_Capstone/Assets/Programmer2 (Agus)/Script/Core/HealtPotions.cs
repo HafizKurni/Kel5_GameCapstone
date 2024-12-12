@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthPotions : MonoBehaviour
 {
-    [SerializeField] private float healValue;
+    [SerializeField] public float healValue;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,5 +13,15 @@ public class HealthPotions : MonoBehaviour
             collision.GetComponent<PlayerHealth>().AddHealth(healValue);
             gameObject.SetActive(false);
         }
+    }
+
+    public float GetHealValue()
+    {
+        return healValue;
+    }
+
+    public void SetHealValue(float value)
+    {
+        healValue = value;
     }
 }

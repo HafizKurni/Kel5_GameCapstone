@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private float utimateCD;
+    [SerializeField] public float utimateCD;
     [SerializeField] private float skillCD;
-    [SerializeField] private float damage;
+    [SerializeField] public float damage;
     [SerializeField] private float attackRange;
     [SerializeField] private LayerMask enemyLayerMask;
     private Animator anim;
@@ -21,6 +21,9 @@ public class PlayerAttack : MonoBehaviour
     public int NoOfClick = 0;
     float lastClikTime = 0;
     public float maxComboDelay = 0.9f;
+
+    // Variabel upgrade
+    [SerializeField] private float upgradeMultiplier = 1.2f; // Multiplier upgrade
 
     // Start is called before the first frame update
     void Start()
@@ -60,8 +63,6 @@ public class PlayerAttack : MonoBehaviour
         }
         coldownTimer += Time.deltaTime;
     }
-
-
 
     public void Return1()
     {
@@ -107,7 +108,6 @@ public class PlayerAttack : MonoBehaviour
         fireBalls[CheckFireball()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
-
     public void Attack()
     {
         IsAttacking = true;
@@ -152,5 +152,19 @@ public class PlayerAttack : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(firePoint.position, attackRange);
+    }
+
+    // Fungsi untuk upgrade damage senjata
+    public void UpgradeWeapon()
+    {
+        damage *= upgradeMultiplier;
+        Debug.Log("Weapon upgraded! New damage: " + damage);
+    }
+
+    // Fungsi untuk upgrade cooldown ultimate
+    public void UpgradeUltimate()
+    {
+        utimateCD /= upgradeMultiplier; // Mengurangi cooldown
+        Debug.Log("Ultimate upgraded! New cooldown: " + utimateCD);
     }
 }

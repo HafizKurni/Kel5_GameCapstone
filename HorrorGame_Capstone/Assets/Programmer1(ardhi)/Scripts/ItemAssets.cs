@@ -10,6 +10,8 @@ public class ItemAssets : MonoBehaviour
         Instance = this;
     }
 
+    public Transform pf_ItemWorld;
+
     public Sprite healthPotionSprite;
     public Sprite manaPotionSprite;
     public Sprite coinSprite;
