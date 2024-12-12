@@ -29,19 +29,16 @@ public class AudioManager : MonoBehaviour
     }
     public void Start()
     {
-        // Memutar musik sesuai dengan scene saat ini
         PlayMusicByScene(SceneManager.GetActiveScene().name);
 
         musicSource.volume = PlayerPrefs.GetFloat(musicVolumeKey, 1f);
         sfxSource.volume = PlayerPrefs.GetFloat(sfxVolumeKey, 1f);
 
-        // Menambahkan listener untuk perubahan scene
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDestroy()
     {
-        // Menghapus listener saat AudioManager dihancurkan
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -54,11 +51,11 @@ public class AudioManager : MonoBehaviour
     {
         switch (sceneName)
         {
-            case "MainMenu":
-                PlayMusic("MainMenu"); // Ganti dengan nama musik tema menu Anda
+            case "Main Menu":
+                PlayMusic("MainMenu");
                 break;
-            case "Ganeplay2":
-                PlayMusic("GamePlay"); // Ganti dengan nama musik permainan Anda
+            case "Ganeplay 2":
+                PlayMusic("GamePlay");
                 break;
             default:
                 break;
