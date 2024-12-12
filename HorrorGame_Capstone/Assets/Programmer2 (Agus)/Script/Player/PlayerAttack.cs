@@ -153,18 +153,4 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(firePoint.position, attackRange);
     }
-
-    // Fungsi untuk upgrade damage senjata
-    public void UpgradeWeapon()
-    {
-        damage *= upgradeMultiplier;
-        Debug.Log("Weapon upgraded! New damage: " + damage);
-    }
-
-    // Fungsi untuk upgrade cooldown ultimate
-    public void UpgradeUltimate()
-    {
-        utimateCD /= upgradeMultiplier; // Mengurangi cooldown
-        Debug.Log("Ultimate upgraded! New cooldown: " + utimateCD);
-    }
 }
