@@ -43,6 +43,7 @@ public class Upgrade : MonoBehaviour
     {
         UpdateUI();
 
+        // Menambahkan listener untuk tombol
         weaponUpgradeButton.onClick.AddListener(OnWeaponUpgradeButtonClicked);
         ultimateUpgradeButton.onClick.AddListener(OnUltimateUpgradeButtonClicked);
         healthPotionUpgradeButton.onClick.AddListener(OnHealthPotionUpgradeButtonClicked);
