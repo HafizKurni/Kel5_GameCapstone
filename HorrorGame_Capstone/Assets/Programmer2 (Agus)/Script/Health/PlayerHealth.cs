@@ -11,18 +11,23 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] private float deathAnimationDuration = 1f;
     [SerializeField] private Image healthBar;
+    [SerializeField] private float invincibilityDuration = 2f;
     private Animator anim;
     private CharMovements charMovements;
+    private SpriteRenderer spriteRenderer;
     public float currentHealth { get; private set; }
     public bool IsDead { get; private set; }
     Vector2 checkPointPos;
+    private bool isInvincible;
 
     void Awake()
     {
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         charMovements = GetComponent<CharMovements>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         IsDead = false;
+        isInvincible = false;
         UpdateHealthSlider();
     }
     private void Start()
@@ -32,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (IsDead) return;
+        if (IsDead || isInvincible) return;
 
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
         UpdateHealthSlider();
@@ -44,7 +49,6 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             IsDead = true;
-            anim.SetTrigger("Die");
             StartCoroutine(HandleDeath());
         }
     }
@@ -73,7 +77,7 @@ public class PlayerHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(deathAnimationDuration);
         DisablePlayerMovement();
-        Respawn();
+        StartCoroutine(Respawn());
     }
 
     private void DisablePlayerMovement()
@@ -92,18 +96,45 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-
     public void UpdateCheckPoint(Vector2 pos)
     {
         checkPointPos = pos;
     }
-    void Respawn()
+    private IEnumerator Respawn()
     {
         IsDead = false;
         transform.position = checkPointPos;
-        anim.SetTrigger("Respawn");
         currentHealth = startingHealth;
         EnablePlayerMovementt();
         UpdateHealthSlider();
+
+        isInvincible = true;
+        StartCoroutine(InvincibilityFlash());
+        yield return new WaitForSeconds(invincibilityDuration);
+        isInvincible = false;
+        SetAlpha(1f);
     }
+
+    private IEnumerator InvincibilityFlash()
+    {
+        float flashDuration = 0.1f;
+        float elapsed = 0f;
+
+        while (elapsed < invincibilityDuration)
+        {
+            SetAlpha(0f);
+            yield return new WaitForSeconds(flashDuration);
+            SetAlpha(1f);
+            yield return new WaitForSeconds(flashDuration);
+            elapsed += flashDuration * 2;
+        }
+    }
+
+    private void SetAlpha(float alpha)
+    {
+        Color color = spriteRenderer.color;
+        color.a = alpha;
+        spriteRenderer.color = color;
+    }
+
 }

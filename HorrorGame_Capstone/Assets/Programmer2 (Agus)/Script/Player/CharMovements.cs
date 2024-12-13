@@ -14,14 +14,15 @@ public class CharMovements : MonoBehaviour
     [Header("Jump")]
     public float JumpForce;
     public int maxJumpCount;
-    private bool Grounded;
+    public bool Grounded;
+    public bool canJump = true;
     private int jumpRemaining;
 
     private Animator anim;
     private Rigidbody2D body;
     private Vector2 dashingDir;
     private bool isDashing;
-    private bool canDash = true;
+    public bool canDash = true;
 
     private PlayerInput playerInput;
 
@@ -66,7 +67,7 @@ public class CharMovements : MonoBehaviour
 
     private void HandleJump()
     {
-        if (playerInput.Player.Jump.triggered && Grounded && jumpRemaining > 0)
+        if (playerInput.Player.Jump.triggered && Grounded && canJump && jumpRemaining > 0)
         {
             Jump();
         }
@@ -105,7 +106,7 @@ public class CharMovements : MonoBehaviour
 
     public void Jump()
     {
-        if (jumpRemaining > 0)
+        if (jumpRemaining > 0 && canJump)
         {
             body.velocity = new Vector2(body.velocity.x, JumpForce);
             anim.SetTrigger("Jump");

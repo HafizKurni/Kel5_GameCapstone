@@ -67,7 +67,7 @@ public class Upgrade : MonoBehaviour
         healthPotionUpgradeButton.interactable = healthPotionLevel < maxHealthPotionLevel;
 
         Debug.Log($"Weapon Level: {weaponLevel}, Damage: {playerAttack.damage}");
-        Debug.Log($"Ultimate Level: {ultimateLevel}, Cooldown: {playerAttack.utimateCD}");
+        Debug.Log($"Ultimate Level: {ultimateLevel}, Cooldown: {playerAttack.ultimateCD}");
         Debug.Log($"HealthPotion Level: {healthPotionLevel}, Heal Value: {healthPotions.healValue}");
     }
 
@@ -93,11 +93,11 @@ public class Upgrade : MonoBehaviour
 
     public void UpgradeUltimate()
     {
-        if (ultimateLevel < maxUltimateLevel && playerAttack.utimateCD > minUltimateCooldown)
+        if (ultimateLevel < maxUltimateLevel && playerAttack.ultimateCD > minUltimateCooldown)
         {
             ultimateLevel++;
-            playerAttack.utimateCD -= ultimateCooldownDecrement;
-            playerAttack.utimateCD = Mathf.Clamp(playerAttack.utimateCD, minUltimateCooldown, Mathf.Infinity);
+            playerAttack.ultimateCD -= ultimateCooldownDecrement;
+            playerAttack.ultimateCD = Mathf.Clamp(playerAttack.ultimateCD, minUltimateCooldown, Mathf.Infinity);
             UpdateUI();
         }
     }

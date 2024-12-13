@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
     [Header("Health Settings")]
-    [SerializeField] private float startingHealth = 100f;
+    [SerializeField] public float startingHealth = 100f;
     [SerializeField] private float deathAnimationDuration = 1f;
     [SerializeField] private GameObject lootPrefab;
     [SerializeField] private float lootDelay = 0.5f;
@@ -17,6 +17,10 @@ public class EnemyHealth : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField] private Image healthBar;
+
+    [Header("Death Object")]
+    [SerializeField] private GameObject ObjectDestroy;
+
     void Awake()
     {
         currentHealth = startingHealth;
@@ -57,6 +61,10 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(deathAnimationDuration);
         yield return new WaitForSeconds(lootDelay);
         DropLoot();
+        if (ObjectDestroy != null)
+        {
+            Destroy(ObjectDestroy);
+        }
         gameObject.SetActive(false);
     }
 
