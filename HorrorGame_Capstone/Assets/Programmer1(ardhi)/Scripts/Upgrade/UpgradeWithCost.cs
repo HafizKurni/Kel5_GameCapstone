@@ -22,8 +22,9 @@ public class UpgradeWithCost : MonoBehaviour
     [SerializeField] private Sprite activeDot;
     [SerializeField] private Sprite inactiveDot;
 
-    // Coin Management
-    [SerializeField] private int playerCoins = 100;
+    // Coin Manager
+    [SerializeField] private CoinManager coinManager;
+
     [SerializeField] private TextMeshProUGUI coinText;
 
     // Harga Upgrade
@@ -82,7 +83,7 @@ public class UpgradeWithCost : MonoBehaviour
         UpdateHealthIndicator(healthPotionLevel, maxHealthPotionLevel);
 
         // Memperbarui jumlah koin di UI
-        coinText.text = $"{playerCoins}";
+        coinText.text = $"{coinManager.Coins}";
 
         // Memperbarui harga upgrade di UI
         weaponUpgradeCostText.text = $"{weaponUpgradeCost}";
@@ -90,9 +91,9 @@ public class UpgradeWithCost : MonoBehaviour
         healthPotionUpgradeCostText.text = $"{healthPotionUpgradeCost}";
 
         // Menonaktifkan tombol jika level maksimum tercapai atau koin tidak cukup
-        weaponUpgradeButton.interactable = weaponLevel < maxWeaponLevel && playerCoins >= weaponUpgradeCost;
-        ultimateUpgradeButton.interactable = ultimateLevel < maxUltimateLevel && playerCoins >= ultimateUpgradeCost;
-        healthPotionUpgradeButton.interactable = healthPotionLevel < maxHealthPotionLevel && playerCoins >= healthPotionUpgradeCost;
+        weaponUpgradeButton.interactable = weaponLevel < maxWeaponLevel && coinManager.Coins >= weaponUpgradeCost;
+        ultimateUpgradeButton.interactable = ultimateLevel < maxUltimateLevel && coinManager.Coins >= ultimateUpgradeCost;
+        healthPotionUpgradeButton.interactable = healthPotionLevel < maxHealthPotionLevel && coinManager.Coins >= healthPotionUpgradeCost;
 
         Debug.Log($"Weapon Level: {weaponLevel}, Damage: {playerAttack.damage}");
         Debug.Log($"Ultimate Level: {ultimateLevel}, Cooldown: {playerAttack.ultimateCD}");
@@ -110,9 +111,8 @@ public class UpgradeWithCost : MonoBehaviour
 
     public void UpgradeWeapon()
     {
-        if (weaponLevel < maxWeaponLevel && playerAttack.damage < maxWeaponDamage && playerCoins >= weaponUpgradeCost)
+        if (weaponLevel < maxWeaponLevel && playerAttack.damage < maxWeaponDamage && coinManager.SpendCoins(weaponUpgradeCost))
         {
-            playerCoins -= weaponUpgradeCost;
             weaponLevel++;
             playerAttack.damage += weaponDamageIncrement;
             playerAttack.damage = Mathf.Clamp(playerAttack.damage, 0, maxWeaponDamage);
@@ -124,9 +124,8 @@ public class UpgradeWithCost : MonoBehaviour
 
     public void UpgradeUltimate()
     {
-        if (ultimateLevel < maxUltimateLevel && playerAttack.ultimateCD > minUltimateCooldown && playerCoins >= ultimateUpgradeCost)
+        if (ultimateLevel < maxUltimateLevel && playerAttack.ultimateCD > minUltimateCooldown && coinManager.SpendCoins(ultimateUpgradeCost))
         {
-            playerCoins -= ultimateUpgradeCost;
             ultimateLevel++;
             playerAttack.ultimateCD -= ultimateCooldownDecrement;
             playerAttack.ultimateCD = Mathf.Clamp(playerAttack.ultimateCD, minUltimateCooldown, Mathf.Infinity);
@@ -138,9 +137,8 @@ public class UpgradeWithCost : MonoBehaviour
 
     public void UpgradeHealthPotion()
     {
-        if (healthPotionLevel < maxHealthPotionLevel && healthPotions.healValue < maxHealthPotionValue && playerCoins >= healthPotionUpgradeCost)
+        if (healthPotionLevel < maxHealthPotionLevel && healthPotions.healValue < maxHealthPotionValue && coinManager.SpendCoins(healthPotionUpgradeCost))
         {
-            playerCoins -= healthPotionUpgradeCost;
             healthPotionLevel++;
             healthPotions.healValue += healthPotionIncrement;
             healthPotions.healValue = Mathf.Clamp(healthPotions.healValue, 0, maxHealthPotionValue);
