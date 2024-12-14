@@ -386,7 +386,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8c4cb63ef7885c4c80442e00caf0fd6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7019608, g: 0, b: 0, a: 0.94509804}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -451,10 +451,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 10
   deathAnimationDuration: 1
-  lootPrefab: {fileID: 2743637596322197745, guid: 0114bab6521cec74b838cf1fc40fd7f5, type: 3}
+  lootPrefab: {fileID: 8133351377574726014, guid: 374464930a76c6c418820e8a69ea9f7a, type: 3}
   lootDelay: 0.5
   lootOffset: {x: 0, y: 0.5, z: 0}
   healthBar: {fileID: 3499774388792244963}
+  ObjectDestroy: {fileID: 8823786734039347965}
 --- !u!61 &3705028214829429723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -525,9 +526,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6669eb60c7255408ac818928e248c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2
   chaseRange: 10.04
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
   scale: {x: 0.3, y: 0.3, z: 0.3}
+  lifeTime: 10

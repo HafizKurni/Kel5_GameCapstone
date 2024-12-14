@@ -6813,6 +6813,7 @@ GameObject:
   - component: {fileID: 2077526068}
   - component: {fileID: 2077526067}
   - component: {fileID: 2077526069}
+  - component: {fileID: 2077526070}
   m_Layer: 5
   m_Name: Menu Pengaturan
   m_TagString: Untagged
@@ -6919,6 +6920,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 01730bbff67d36c49bd58e3bb6452f79, type: 2}
+--- !u!114 &2077526070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077526063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479fbe71bb6698249b008d04b805bfc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 1210186880}
+  sfxSlider: {fileID: 682864062}
 --- !u!1 &2082854409
 GameObject:
   m_ObjectHideFlags: 0

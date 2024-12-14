@@ -83,7 +83,6 @@ public class CharMovements : MonoBehaviour
             canDash = false;
             dashingDir = playerInput.Player.Movement.ReadValue<Vector2>();
 
-            // If no movement input, dash in the direction the character is facing
             if (dashingDir == Vector2.zero)
             {
                 dashingDir = new Vector2(transform.localScale.x, 0);

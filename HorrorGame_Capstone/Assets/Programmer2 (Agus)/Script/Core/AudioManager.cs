@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour
             case "Main Menu":
                 PlayMusic("MainMenu");
                 break;
-            case "Gameplay 2":
+            case "Gameplay2":
                 PlayMusic("GamePlay");
                 break;
             default:

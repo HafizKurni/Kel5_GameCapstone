@@ -12,6 +12,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float lootDelay = 0.5f;
     [SerializeField] private Vector3 lootOffset = new Vector3(0, 0.5f, 0);
     private Animator anim;
+    private JumpForceUP jumpForceUP;
     public float currentHealth { get; private set; }
     public bool IsDead { get; private set; }
 
@@ -61,13 +62,19 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(deathAnimationDuration);
         yield return new WaitForSeconds(lootDelay);
         DropLoot();
+
+        if (jumpForceUP != null) 
+        {
+            jumpForceUP.AddJumpForceOnBossDeath();
+        }
+
         if (ObjectDestroy != null)
         {
             Destroy(ObjectDestroy);
         }
+
         gameObject.SetActive(false);
     }
-
     private void DropLoot()
     {
         if (lootPrefab != null)
