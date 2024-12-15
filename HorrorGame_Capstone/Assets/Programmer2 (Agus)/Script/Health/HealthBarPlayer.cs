@@ -16,14 +16,13 @@ public class HealthBarPlayer : MonoBehaviour
     [SerializeField] private CanvasGroup pauseCanvasGroup;
 
     [Header("UI Buttons")]
-    [SerializeField] private Button lanjutButton; // Referensi ke tombol "Lanjut btn"
+    [SerializeField] private Button lanjutButton;
 
     void Start()
     {
         totalHealthBar.fillAmount = playerHealth.currentHealth / 10;
         PauseGame(false);
 
-        // Assign fungsi resume ke tombol "Lanjut btn"
         if (lanjutButton != null)
         {
             lanjutButton.onClick.AddListener(() => PauseGame(false));
@@ -36,7 +35,6 @@ public class HealthBarPlayer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // Toggle pause status
             bool isPaused = pauseScreen.activeInHierarchy;
             PauseGame(!isPaused);
         }
@@ -55,8 +53,6 @@ public class HealthBarPlayer : MonoBehaviour
 
         Time.timeScale = status ? 0 : 1;
     }
-
-    // Fungsi untuk memuat scene tertentu
     public void LoadScene(string sceneName)
     {
         Time.timeScale = 1;

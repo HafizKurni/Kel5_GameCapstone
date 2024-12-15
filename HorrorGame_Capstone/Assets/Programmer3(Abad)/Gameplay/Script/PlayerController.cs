@@ -6,41 +6,41 @@ using UnityEngine.Scripting.APIUpdating;
 public class PlayerController : MonoBehaviour
 {
     [Header("Horizontal Movement Settings:")]
-    [SerializeField] private float walkSpeed = 1; //sets the players movement speed on the ground
+    [SerializeField] private float walkSpeed = 1;
     [Space(5)]
 
 
 
     [Header("Vertical Movement Settings")]
-    [SerializeField] private float jumpForce = 45f; //sets how hight the player can jump
+    [SerializeField] private float jumpForce = 45f;
 
-    private float jumpBufferCounter = 0; //stores the jump button input
-    [SerializeField] private float jumpBufferFrames; //sets the max amount of frames the jump buffer input is stored
+    private float jumpBufferCounter = 0;
+    [SerializeField] private float jumpBufferFrames;
 
-    private float coyoteTimeCounter = 0; //stores the Grounded() bool
-    [SerializeField] private float coyoteTime; //sets the max amount of frames the Grounded() bool is stored
+    private float coyoteTimeCounter = 0;
+    [SerializeField] private float coyoteTime;
 
-    private int airJumpCounter = 0; //keeps track of how many times the player has jumped in the air
-    [SerializeField] private int maxAirJumps; //the max no. of air jumps
+    private int airJumpCounter = 0;
+    [SerializeField] private int maxAirJumps;
 
-    private float gravity; //stores the gravity scale at start
+    private float gravity;
     [Space(5)]
 
 
 
     [Header("Ground Check Settings:")]
-    [SerializeField] private Transform groundCheckPoint; //point at which ground check happens
-    [SerializeField] private float groundCheckY = 0.2f; //how far down from ground chekc point is Grounded() checked
-    [SerializeField] private float groundCheckX = 0.5f; //how far horizontally from ground chekc point to the edge of the player is
-    [SerializeField] private LayerMask whatIsGround; //sets the ground layer
+    [SerializeField] private Transform groundCheckPoint;
+    [SerializeField] private float groundCheckY = 0.2f;
+    [SerializeField] private float groundCheckX = 0.5f;
+    [SerializeField] private LayerMask whatIsGround;
     [Space(5)]
 
 
 
     [Header("Dash Settings")]
-    [SerializeField] private float dashSpeed; //speed of the dash
-    [SerializeField] private float dashTime; //amount of time spent dashing
-    [SerializeField] private float dashCooldown; //amount of time between dashes
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashTime;
+    [SerializeField] private float dashCooldown;
     [SerializeField] GameObject dashEffect;
     private bool canDash = true, dashed;
     [Space(5)]
@@ -48,35 +48,35 @@ public class PlayerController : MonoBehaviour
 
 
     [Header("Attack Settings:")]
-    [SerializeField] private Transform SideAttackTransform; //the middle of the side attack area
-    [SerializeField] private Vector2 SideAttackArea; //how large the area of side attack is
+    [SerializeField] private Transform SideAttackTransform;
+    [SerializeField] private Vector2 SideAttackArea;
 
-    [SerializeField] private Transform UpAttackTransform; //the middle of the up attack area
-    [SerializeField] private Vector2 UpAttackArea; //how large the area of side attack is
+    [SerializeField] private Transform UpAttackTransform;
+    [SerializeField] private Vector2 UpAttackArea;
 
-    [SerializeField] private Transform DownAttackTransform; //the middle of the down attack area
-    [SerializeField] private Vector2 DownAttackArea; //how large the area of down attack is
+    [SerializeField] private Transform DownAttackTransform;
+    [SerializeField] private Vector2 DownAttackArea;
 
-    [SerializeField] private LayerMask attackableLayer; //the layer the player can attack and recoil off of
+    [SerializeField] private LayerMask attackableLayer;
 
     [SerializeField] private float timeBetweenAttack;
     private float timeSinceAttack;
 
-    [SerializeField] private float damage; //the damage the player does to an enemy
+    [SerializeField] private float damage;
 
-    [SerializeField] private GameObject slashEffect; //the effect of the slashs
+    [SerializeField] private GameObject slashEffect;
     [Space(5)]
 
 
 
     [Header("Recoil Settings:")]
-    [SerializeField] private int recoilXSteps = 5; //how many FixedUpdates() the player recoils horizontally for
-    [SerializeField] private int recoilYSteps = 5; //how many FixedUpdates() the player recoils vertically for
+    [SerializeField] private int recoilXSteps = 5;
+    [SerializeField] private int recoilYSteps = 5;
 
-    [SerializeField] private float recoilXSpeed = 100; //the speed of horizontal recoil
-    [SerializeField] private float recoilYSpeed = 100; //the speed of vertical recoil
+    [SerializeField] private float recoilXSpeed = 100;
+    [SerializeField] private float recoilYSpeed = 100;
 
-    private int stepsXRecoiled, stepsYRecoiled; //the no. of steps recoiled horizontally and verticall
+    private int stepsXRecoiled, stepsYRecoiled;
     [Space(5)]
 
     [Header("Health Settings")]
@@ -88,12 +88,9 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
 
-    //Input Variables
     private float xAxis, yAxis;
     private bool attack = false;
 
-
-    //creates a singleton of the PlayerController
     public static PlayerController Instance;
 
     private void Awake()
