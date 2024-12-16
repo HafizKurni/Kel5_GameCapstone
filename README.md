@@ -17,7 +17,7 @@ Pada sebuah malam penuh kabut, Vin dan teman-temannya mendaki gunung untuk berke
 2. Ekstrak file ZIP yang diunduh.
 3. Jalankan file **AnimA.exe** untuk mulai bermain.
 
-Present by **Kelompok 9 | ILLUMININE**
+## Present by **Kelompok 9 | ILLUMININE**
 
 Designer : 
 -  Dicki Trio Purbaya (Universitas Negeri Malang) 
