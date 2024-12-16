@@ -13,7 +13,7 @@ Pada sebuah malam penuh kabut, Vin dan teman-temannya mendaki gunung untuk berke
 
 
 ## Cara Install dan Jalankan
-1. Unduh game dari [AnimA - The Fallen Heroes & Mystic Forest v1.0.zip]([https://itch.io/download](https://illuminine.itch.io/anima-the-fallen-heroes-and-mystic-forest)).
+1. Unduh game dari [AnimA - The Fallen Heroes & Mystic Forest v1.0.zip](https://illuminine.itch.io/anima-the-fallen-heroes-and-mystic-forest).
 2. Ekstrak file ZIP yang diunduh.
 3. Jalankan file **AnimA.exe** untuk mulai bermain.
 
