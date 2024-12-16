@@ -19,5 +19,22 @@ Pada sebuah malam penuh kabut, Vin dan teman-temannya mendaki gunung untuk berke
 
 Present by **Kelompok 9 | ILLUMININE**
 
+Designer : 
+-  Dicki Trio Purbaya (Universitas Negeri Malang) 
+-  Wolfazeus Pattersens (Universitas Negeri Surabaya)
+
+Programmer : 
+- Hafiz Muhammad Kurniawan (Universitas Sriwijaya)
+- Muhammad Agus Sundawa Putra (Politeknik Negeri Media Kreatif)
+- Muhammad Falihul Abad Arsyil Azdim K (Universitas Negeri Malang)
+- Mohammad Ardhi Efendi (Universitas Jember)
+Artist : 
+- Fajar Santoso (Universitas Negeri Surabaya) 
+- Fadhlan Ikhtiari Qital (Universitas Gunadarma) 
+
+Project Manager : 
+- Hanif (Politeknik Aceh) 
+- Nusaibah (STMIK Indo Daya Suvana)
+
 ---
 Selamat bermain dan nikmati petualangan di dunia gelap dan mistis AnimA!
