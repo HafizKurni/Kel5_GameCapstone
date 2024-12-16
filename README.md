@@ -9,7 +9,6 @@ Pada sebuah malam penuh kabut, Vin dan teman-temannya mendaki gunung untuk berke
 
 ## Gameplay Screenshots
 ![Gameplay Screenshot 1](https://img.itch.zone/aW1hZ2UvMzE2OTg4Ni8xODk0NTMwMC5qcGc=/original/lncL84.jpg)
-![Gameplay Screenshot 2](https://img.itch.zone/aW1hZ2UvMzE2OTg4Ni8xODk5MjEzOS5wbmc=/original/uv45Hj.png)
 ![Gameplay Screenshot 3](https://img.itch.zone/aW1hZ2UvMzE2OTg4Ni8xODk0NTI5OC5qcGc=/original/LwVcYA.jpg)
 
 
